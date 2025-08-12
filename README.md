@@ -27,19 +27,7 @@ The system consists of four main components:
 - Required Python packages (see `requirements.txt`)
 - AWS Lambda (for cloud deployment)
 
-## Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/fhir-ereferral-processor.git
-```
-
-2. Install required packages:
-```bash
-pip install -r requirements.txt
-```
-
-3. Set up environment variables in `.env`:
+## Set up environment variables in configuration on AWS:
 ```env
 POSTGRES_HOST=your_host
 POSTGRES_DATABASE=your_database
@@ -89,13 +77,6 @@ CREATE TABLE inbound_referral (
 );
 ```
 
-## Usage
-
-### Local Development
-
-```python
-python lambda_function.py
-```
 
 ### AWS Lambda Deployment
 
@@ -141,3 +122,4 @@ The system provides comprehensive error handling for:
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
