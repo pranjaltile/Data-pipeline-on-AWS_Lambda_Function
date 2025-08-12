@@ -1,0 +1,197 @@
+{
+    "resourceType": "Bundle",
+    "type": "collection",
+    "contained": [
+        {
+            "resourceType": "Patient",
+            "id": "patient1",
+            "identifier": [
+                {
+                    "type": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                "code": "MC",
+                                "display": "Medicare Number"
+                            }
+                        ]
+                    },
+                    "value": "2345678901"
+                },
+                {
+                    "type": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                "code": "DVAU",
+                                "display": "DVA Number"
+                            }
+                        ]
+                    },
+                    "value": "DVA123456"
+                }
+            ],
+            "name": [
+                {
+                    "given": ["John", "Peter"],
+                    "family": "Smith"
+                }
+            ],
+            "gender": "male",
+            "birthDate": "1980-01-01",
+            "address": [
+                {
+                    "line": ["123 Main Street"],
+                    "city": "Sydney",
+                    "state": "NSW",
+                    "postalCode": "2000",
+                    "country": "Australia"
+                }
+            ],
+            "telecom": [
+                {
+                    "system": "phone",
+                    "value": "0400123456",
+                    "use": "mobile"
+                },
+                {
+                    "system": "phone",
+                    "value": "0298765432",
+                    "use": "home"
+                },
+                {
+                    "system": "email",
+                    "value": "john.smith@email.com"
+                }
+            ],
+            "contact": [
+                {
+                    "relationship": [
+                        {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                                    "code": "N",
+                                    "display": "Next of Kin"
+                                }
+                            ]
+                        }
+                    ],
+                    "name": {
+                        "given": ["Mary"],
+                        "family": "Smith"
+                    },
+                    "telecom": [
+                        {
+                            "system": "phone",
+                            "value": "0400987654"
+                        },
+                        {
+                            "system": "email",
+                            "value": "mary.smith@email.com"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "resourceType": "Practitioner",
+            "id": "practitioner1",
+            "identifier": [
+                {
+                    "type": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                "code": "NPI",
+                                "display": "National Provider Identifier"
+                            }
+                        ]
+                    },
+                    "value": "8765432109"
+                }
+            ],
+            "name": [
+                {
+                    "given": ["David"],
+                    "family": "Jones"
+                }
+            ]
+        },
+        {
+            "resourceType": "Organization",
+            "id": "organization1",
+            "identifier": [
+                {
+                    "type": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                "code": "NOI",
+                                "display": "Organization Identifier"
+                            }
+                        ]
+                    },
+                    "value": "12345"
+                },
+                {
+                    "type": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                "code": "RI",
+                                "display": "EDI System Identifier"
+                            }
+                        ]
+                    },
+                    "system": "HealthLink",
+                    "value": "ABC123"
+                }
+            ],
+            "name": "City Medical Center",
+            "telecom": [
+                {
+                    "system": "phone",
+                    "value": "0298901234"
+                },
+                {
+                    "system": "email",
+                    "value": "admin@citymedical.com"
+                }
+            ],
+            "address": [
+                {
+                    "line": ["456 Healthcare Avenue"],
+                    "city": "Sydney",
+                    "state": "NSW",
+                    "postalCode": "2000",
+                    "country": "Australia"
+                }
+            ]
+        },
+        {
+            "resourceType": "PractitionerRole",
+            "id": "role1",
+            "identifier": [
+                {
+                    "type": {
+                        "coding": [
+                            {
+                                "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                                "code": "UPIN",
+                                "display": "Medicare Provider Number"
+                            }
+                        ]
+                    },
+                    "value": "1234567A"
+                }
+            ],
+            "practitioner": {
+                "reference": "Practitioner/practitioner1"
+            },
+            "organization": {
+                "reference": "Organization/organization1"
+            }
+        }
+    ]
+}
